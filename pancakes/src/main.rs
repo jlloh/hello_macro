@@ -1,4 +1,4 @@
-use hello_macro::HelloMacro;
+use hello_macro_internal::HelloMacro;
 
 #[derive(HelloMacro)]
 struct TestStruct {

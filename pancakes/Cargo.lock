@@ -3,15 +3,7 @@
 version = 3
 
 [[package]]
-name = "hello_macro"
-version = "0.1.0"
-dependencies = [
- "hello_macro_derive",
- "hello_macro_internal",
-]
-
-[[package]]
-name = "hello_macro_derive"
+name = "hello_macro_impl"
 version = "0.1.0"
 dependencies = [
  "quote",
@@ -21,12 +13,15 @@ dependencies = [
 [[package]]
 name = "hello_macro_internal"
 version = "0.1.0"
+dependencies = [
+ "hello_macro_impl",
+]
 
 [[package]]
 name = "pancakes"
 version = "0.1.0"
 dependencies = [
- "hello_macro",
+ "hello_macro_internal",
 ]
 
 [[package]]
